@@ -2,17 +2,20 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import {Link} from 'expo-router'
 import ThemedView from '../components/ThemedView'
 import Logo from '../components/Logo'
-import ThemedSpacer from '../components/ThemedSpacer'
+import Spacer from '../components/Spacer'
+import ThemedText from '../components/ThemedText'
 
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
       <Logo style={styles.img}/>
-      <Text style={styles.title}>Let's GO!:D</Text>
-      <ThemedSpacer />
-      <Text >Reading List App</Text>
-      <Link href={"/about"} style={styles.link}>About page</Link>
-      <Link href={"/contact"} style={styles.link}>Contact page</Link>
+      <ThemedText style={styles.title}>Let's GO!:D</ThemedText>
+      <Spacer />
+      <ThemedText >Reading List App</ThemedText>
+      <ThemedText></ThemedText>
+      <Link href={"/Login"} style={styles.link}><ThemedText>Login page</ThemedText></Link>
+      <Link href={"/Register"} style={styles.link}><ThemedText>Register page</ThemedText></Link>
+      <Link href={"/create"} style={styles.link}><ThemedText>Create page</ThemedText></Link>
     </ThemedView>
   )
 }
